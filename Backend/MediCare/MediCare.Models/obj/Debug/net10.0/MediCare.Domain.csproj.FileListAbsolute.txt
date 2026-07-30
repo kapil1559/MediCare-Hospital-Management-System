@@ -1,0 +1,11 @@
+D:\MediCare-Hospital-Management-System\Backend\MediCare\MediCare.Models\bin\Debug\net10.0\MediCare.Domain.deps.json
+D:\MediCare-Hospital-Management-System\Backend\MediCare\MediCare.Models\bin\Debug\net10.0\MediCare.Domain.dll
+D:\MediCare-Hospital-Management-System\Backend\MediCare\MediCare.Models\bin\Debug\net10.0\MediCare.Domain.pdb
+D:\MediCare-Hospital-Management-System\Backend\MediCare\MediCare.Models\obj\Debug\net10.0\MediCare.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\MediCare-Hospital-Management-System\Backend\MediCare\MediCare.Models\obj\Debug\net10.0\MediCare.Domain.AssemblyInfoInputs.cache
+D:\MediCare-Hospital-Management-System\Backend\MediCare\MediCare.Models\obj\Debug\net10.0\MediCare.Domain.AssemblyInfo.cs
+D:\MediCare-Hospital-Management-System\Backend\MediCare\MediCare.Models\obj\Debug\net10.0\MediCare.Domain.csproj.CoreCompileInputs.cache
+D:\MediCare-Hospital-Management-System\Backend\MediCare\MediCare.Models\obj\Debug\net10.0\MediCare.Domain.dll
+D:\MediCare-Hospital-Management-System\Backend\MediCare\MediCare.Models\obj\Debug\net10.0\refint\MediCare.Domain.dll
+D:\MediCare-Hospital-Management-System\Backend\MediCare\MediCare.Models\obj\Debug\net10.0\MediCare.Domain.pdb
+D:\MediCare-Hospital-Management-System\Backend\MediCare\MediCare.Models\obj\Debug\net10.0\ref\MediCare.Domain.dll

@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="MediCare.API/MediCare.API.csproj" />
+  <Project Path="MediCare.Common/MediCare.Common.csproj" />
+  <Project Path="MediCare.Core/MediCare.Core.csproj" />
+  <Project Path="MediCare.Infrastructure/MediCare.Infrastructure.csproj" />
+  <Project Path="MediCare.Models/MediCare.Domain.csproj" />
+</Solution>
