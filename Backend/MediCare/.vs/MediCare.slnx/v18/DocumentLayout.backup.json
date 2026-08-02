@@ -3,24 +3,56 @@
   "WorkspaceRootPath": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF5B4EBF-1A32-449C-BC5D-FCEA346323CD}|MediCare.API\\MediCare.API.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.api\\medicare.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{CF5B4EBF-1A32-449C-BC5D-FCEA346323CD}|MediCare.API\\MediCare.API.csproj|solutionrelative:medicare.api\\medicare.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{74A37DDC-6EBE-884E-6849-EE0E48FED9E9}|MediCare.API\\MediCare.API.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74A37DDC-6EBE-884E-6849-EE0E48FED9E9}|MediCare.API\\MediCare.API.csproj|solutionrelative:medicare.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{044857D4-526C-4074-B576-946D188F48B0}|MediCare.Models\\MediCare.Models.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.models\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{044857D4-526C-4074-B576-946D188F48B0}|MediCare.Models\\MediCare.Models.csproj|solutionrelative:medicare.models\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74A37DDC-6EBE-884E-6849-EE0E48FED9E9}|MediCare.API\\MediCare.API.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74A37DDC-6EBE-884E-6849-EE0E48FED9E9}|MediCare.API\\MediCare.API.csproj|solutionrelative:medicare.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44D6CADF-4399-4A3E-8354-6C8A7B10087C}|MediCare.Common\\MediCare.Common.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.common\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44D6CADF-4399-4A3E-8354-6C8A7B10087C}|MediCare.Common\\MediCare.Common.csproj|solutionrelative:medicare.common\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EDDDA5D-7641-2142-04DD-74EA1334EAD3}|MediCare.Infrastructure\\MediCare.Infrastructure.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDDDA5D-7641-2142-04DD-74EA1334EAD3}|MediCare.Infrastructure\\MediCare.Infrastructure.csproj|solutionrelative:medicare.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E69141A4-2747-41B9-A5C6-08C61A9AB6AC}|MediCare.Infrastructure\\MediCare.Infrastructure.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E69141A4-2747-41B9-A5C6-08C61A9AB6AC}|MediCare.Infrastructure\\MediCare.Infrastructure.csproj|solutionrelative:medicare.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1234870F-49F4-7266-E57F-90CD30332BF0}|MediCare.Core\\MediCare.Core.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.core\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1234870F-49F4-7266-E57F-90CD30332BF0}|MediCare.Core\\MediCare.Core.csproj|solutionrelative:medicare.core\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC832DEF-E991-4E43-85FC-CF0EB5A77C15}|MediCare.Core\\MediCare.Core.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC832DEF-E991-4E43-85FC-CF0EB5A77C15}|MediCare.Core\\MediCare.Core.csproj|solutionrelative:medicare.core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EDDDA5D-7641-2142-04DD-74EA1334EAD3}|MediCare.Infrastructure\\MediCare.Infrastructure.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.infrastructure\\data\\dappercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDDDA5D-7641-2142-04DD-74EA1334EAD3}|MediCare.Infrastructure\\MediCare.Infrastructure.csproj|solutionrelative:medicare.infrastructure\\data\\dappercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D46EEB7E-20B5-08AA-867F-5CA94881F332}|MediCare.Models\\MediCare.Domain.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.models\\responses\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D46EEB7E-20B5-08AA-867F-5CA94881F332}|MediCare.Models\\MediCare.Domain.csproj|solutionrelative:medicare.models\\responses\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74A37DDC-6EBE-884E-6849-EE0E48FED9E9}|MediCare.API\\MediCare.API.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.api\\medicare.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{74A37DDC-6EBE-884E-6849-EE0E48FED9E9}|MediCare.API\\MediCare.API.csproj|solutionrelative:medicare.api\\medicare.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74A37DDC-6EBE-884E-6849-EE0E48FED9E9}|MediCare.API\\MediCare.API.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{74A37DDC-6EBE-884E-6849-EE0E48FED9E9}|MediCare.API\\MediCare.API.csproj|solutionrelative:medicare.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D46EEB7E-20B5-08AA-867F-5CA94881F332}|MediCare.Models\\MediCare.Domain.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.models\\requests\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D46EEB7E-20B5-08AA-867F-5CA94881F332}|MediCare.Models\\MediCare.Domain.csproj|solutionrelative:medicare.models\\requests\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35586001-64AC-915E-BF02-00AD6F87FA85}|MediCare.Common\\MediCare.Common.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.common\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35586001-64AC-915E-BF02-00AD6F87FA85}|MediCare.Common\\MediCare.Common.csproj|solutionrelative:medicare.common\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D46EEB7E-20B5-08AA-867F-5CA94881F332}|MediCare.Models\\MediCare.Domain.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.models\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D46EEB7E-20B5-08AA-867F-5CA94881F332}|MediCare.Models\\MediCare.Domain.csproj|solutionrelative:medicare.models\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDDDA5D-7641-2142-04DD-74EA1334EAD3}|MediCare.Infrastructure\\MediCare.Infrastructure.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDDDA5D-7641-2142-04DD-74EA1334EAD3}|MediCare.Infrastructure\\MediCare.Infrastructure.csproj|solutionrelative:medicare.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1234870F-49F4-7266-E57F-90CD30332BF0}|MediCare.Core\\MediCare.Core.csproj|d:\\medicare-hospital-management-system\\backend\\medicare\\medicare.core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1234870F-49F4-7266-E57F-90CD30332BF0}|MediCare.Core\\MediCare.Core.csproj|solutionrelative:medicare.core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,12 +62,94 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "MediCare.API\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.API\\Controllers\\AuthController.cs*",
+              "RelativeToolTip": "MediCare.API\\Controllers\\AuthController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T16:40:53.539Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MediCare.API",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.API\\Program.cs",
+              "RelativeDocumentMoniker": "MediCare.API\\Program.cs",
+              "ToolTip": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.API\\Program.cs*",
+              "RelativeToolTip": "MediCare.API\\Program.cs*",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAqwB8AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T16:34:55.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "MediCare.Infrastructure\\Repositories\\UserRepository.cs",
+              "ToolTip": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "MediCare.Infrastructure\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T18:31:49.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.Core\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "MediCare.Core\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.Core\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "MediCare.Core\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T18:29:04.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DapperContext.cs",
+              "DocumentMoniker": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.Infrastructure\\Data\\DapperContext.cs",
+              "RelativeDocumentMoniker": "MediCare.Infrastructure\\Data\\DapperContext.cs",
+              "ToolTip": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.Infrastructure\\Data\\DapperContext.cs",
+              "RelativeToolTip": "MediCare.Infrastructure\\Data\\DapperContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T18:28:21.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginResponse.cs",
+              "DocumentMoniker": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.Models\\Responses\\LoginResponse.cs",
+              "RelativeDocumentMoniker": "MediCare.Models\\Responses\\LoginResponse.cs",
+              "ToolTip": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.Models\\Responses\\LoginResponse.cs",
+              "RelativeToolTip": "MediCare.Models\\Responses\\LoginResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T18:24:17.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MediCare.API.csproj",
               "DocumentMoniker": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.API\\MediCare.API.csproj",
               "RelativeDocumentMoniker": "MediCare.API\\MediCare.API.csproj",
               "ToolTip": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.API\\MediCare.API.csproj",
@@ -47,20 +161,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.API\\appsettings.json",
+              "RelativeDocumentMoniker": "MediCare.API\\appsettings.json",
+              "ToolTip": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.API\\appsettings.json",
+              "RelativeToolTip": "MediCare.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAB7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-01T18:18:22.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.Models\\Requests\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "MediCare.Models\\Requests\\LoginRequest.cs",
+              "ToolTip": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.Models\\Requests\\LoginRequest.cs",
+              "RelativeToolTip": "MediCare.Models\\Requests\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T18:23:04.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Class1.cs",
               "DocumentMoniker": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.Common\\Class1.cs",
               "RelativeDocumentMoniker": "MediCare.Common\\Class1.cs",
               "ToolTip": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.Common\\Class1.cs",
               "RelativeToolTip": "MediCare.Common\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-29T16:58:52.013Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "Class1.cs",
               "DocumentMoniker": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.Models\\Class1.cs",
               "RelativeDocumentMoniker": "MediCare.Models\\Class1.cs",
@@ -68,12 +208,11 @@
               "RelativeToolTip": "MediCare.Models\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T16:57:39.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-29T16:57:39.923Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "Class1.cs",
               "DocumentMoniker": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.Infrastructure\\Class1.cs",
               "RelativeDocumentMoniker": "MediCare.Infrastructure\\Class1.cs",
@@ -81,12 +220,11 @@
               "RelativeToolTip": "MediCare.Infrastructure\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T16:55:31.061Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-29T16:55:31.061Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "Class1.cs",
               "DocumentMoniker": "D:\\MediCare-Hospital-Management-System\\Backend\\MediCare\\MediCare.Core\\Class1.cs",
               "RelativeDocumentMoniker": "MediCare.Core\\Class1.cs",
@@ -94,12 +232,7 @@
               "RelativeToolTip": "MediCare.Core\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T16:54:57.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2026-07-29T16:54:57.735Z"
             }
           ]
         }

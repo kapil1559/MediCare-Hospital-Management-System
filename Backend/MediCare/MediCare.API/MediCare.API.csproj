@@ -15,11 +15,13 @@
     <PackageReference Include="Serilog.Sinks.Console" Version="6.1.1" />
     <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.22.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MediCare.Common\MediCare.Common.csproj" />
     <ProjectReference Include="..\MediCare.Core\MediCare.Core.csproj" />
+    <ProjectReference Include="..\MediCare.Infrastructure\MediCare.Infrastructure.csproj" />
     <ProjectReference Include="..\MediCare.Models\MediCare.Domain.csproj" />
   </ItemGroup>
 

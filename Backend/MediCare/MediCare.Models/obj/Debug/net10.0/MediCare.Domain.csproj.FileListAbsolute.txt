@@ -9,3 +9,4 @@ D:\MediCare-Hospital-Management-System\Backend\MediCare\MediCare.Models\obj\Debu
 D:\MediCare-Hospital-Management-System\Backend\MediCare\MediCare.Models\obj\Debug\net10.0\refint\MediCare.Domain.dll
 D:\MediCare-Hospital-Management-System\Backend\MediCare\MediCare.Models\obj\Debug\net10.0\MediCare.Domain.pdb
 D:\MediCare-Hospital-Management-System\Backend\MediCare\MediCare.Models\obj\Debug\net10.0\ref\MediCare.Domain.dll
+D:\MediCare-Hospital-Management-System\Backend\MediCare\MediCare.Models\obj\Debug\net10.0\MediCare.Domain.sourcelink.json
