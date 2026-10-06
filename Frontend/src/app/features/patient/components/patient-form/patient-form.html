@@ -1,0 +1,425 @@
+<app-form-page>
+
+  <!-- ================= HEADER ================= -->
+
+  <app-form-header
+    [title]="isEditMode() ? 'Edit Patient' : 'Patient Registration'"
+    subtitle="Patient Entry"
+    [mode]="isEditMode() ? 'edit' : 'new'"
+    (backClicked)="cancel()">
+  </app-form-header>
+
+
+  <form
+    class="patient-form"
+    [formGroup]="patientForm"
+    (ngSubmit)="save()">
+
+    <div class="patient-layout">
+
+      <!-- =====================================================
+           LEFT / MAIN AREA
+      ====================================================== -->
+
+      <div class="patient-main">
+
+        <app-form-section
+          title="Patient Information"
+          subtitle="">
+
+          <div class="patient-grid">
+
+            <!-- Patient Code -->
+            <div class="form-field">
+              <label>Patient Code <span>*</span></label>
+
+              <input
+                type="text"
+                formControlName="patientCode"
+                placeholder="P0004">
+
+              @if (
+                patientForm.controls.patientCode.touched &&
+                patientForm.controls.patientCode.invalid
+              ) {
+                <small class="error">
+                  Patient code is required.
+                </small>
+              }
+            </div>
+
+
+            <!-- Registration Date -->
+            <div class="form-field">
+              <label>Registration Date</label>
+
+              <input
+                type="date"
+                [value]="today"
+                readonly>
+            </div>
+
+
+            <!-- Patient Type -->
+            <div class="form-field">
+              <label>Patient Type</label>
+
+              <select>
+                <option value="OPD">OPD</option>
+                <option value="IPD">IPD</option>
+              </select>
+            </div>
+
+
+            <!-- First Name -->
+            <div class="form-field">
+              <label>First Name <span>*</span></label>
+
+              <input
+                type="text"
+                formControlName="firstName"
+                placeholder="First name">
+
+              @if (
+                patientForm.controls.firstName.touched &&
+                patientForm.controls.firstName.invalid
+              ) {
+                <small class="error">
+                  First name is required.
+                </small>
+              }
+            </div>
+
+
+            <!-- Last Name -->
+            <div class="form-field">
+              <label>Last Name</label>
+
+              <input
+                type="text"
+                formControlName="lastName"
+                placeholder="Last name">
+            </div>
+
+
+            <!-- Gender -->
+            <div class="form-field">
+              <label>Gender <span>*</span></label>
+
+              <select formControlName="gender">
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+
+            <!-- DOB -->
+            <div class="form-field">
+              <label>Date of Birth</label>
+
+              <input
+                type="date"
+                formControlName="dob">
+            </div>
+
+
+            <!-- Age -->
+            <div class="form-field">
+              <label>Age <span>*</span></label>
+
+              <input
+                type="number"
+                formControlName="age"
+                min="0"
+                max="150"
+                placeholder="Age">
+            </div>
+
+
+            <!-- Blood Group -->
+            <div class="form-field">
+              <label>Blood Group</label>
+
+              <select formControlName="bloodGroup">
+                <option value="">Select</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select>
+            </div>
+
+
+            <!-- Mobile -->
+            <div class="form-field">
+              <label>Mobile Number</label>
+
+              <input
+                type="tel"
+                formControlName="mobileNo"
+                placeholder="Mobile number">
+            </div>
+
+
+            <!-- Email -->
+            <div class="form-field">
+              <label>Email</label>
+
+              <input
+                type="email"
+                formControlName="email"
+                placeholder="Email address">
+
+              @if (
+                patientForm.controls.email.touched &&
+                patientForm.controls.email.invalid
+              ) {
+                <small class="error">
+                  Enter a valid email.
+                </small>
+              }
+            </div>
+
+
+            <!-- Address -->
+            <div class="form-field full-width">
+              <label>Address</label>
+
+              <input
+                type="text"
+                formControlName="address"
+                placeholder="Patient address">
+            </div>
+
+
+            <!-- City -->
+            <div class="form-field">
+              <label>City</label>
+
+              <input
+                type="text"
+                formControlName="city"
+                placeholder="City">
+            </div>
+
+
+            <!-- State -->
+            <div class="form-field">
+              <label>State</label>
+
+              <input
+                type="text"
+                formControlName="state"
+                placeholder="State">
+            </div>
+
+
+            <!-- Pin -->
+            <div class="form-field">
+              <label>Pin Code</label>
+
+              <input
+                type="text"
+                formControlName="pinCode"
+                placeholder="Pin code">
+            </div>
+
+          </div>
+
+        </app-form-section>
+
+
+        <!-- ================= TABS ================= -->
+
+        <div class="form-tabs">
+
+          <button
+            type="button"
+            class="active">
+            Address Details
+          </button>
+
+          <button type="button">
+            Vitals
+          </button>
+
+          <button type="button">
+            Other Details
+          </button>
+
+        </div>
+
+
+        <!-- ================= ADDRESS TAB ================= -->
+
+        <div class="tab-content">
+
+          <div class="address-grid">
+
+            <div class="form-field full-width">
+              <label>Address</label>
+
+              <input
+                type="text"
+                formControlName="address"
+                placeholder="Address">
+            </div>
+
+            <div class="form-field">
+              <label>City</label>
+
+              <input
+                type="text"
+                formControlName="city"
+                placeholder="City">
+            </div>
+
+            <div class="form-field">
+              <label>State</label>
+
+              <input
+                type="text"
+                formControlName="state"
+                placeholder="State">
+            </div>
+
+            <div class="form-field">
+              <label>Pin Code</label>
+
+              <input
+                type="text"
+                formControlName="pinCode"
+                placeholder="Pin code">
+            </div>
+
+            <div class="form-field">
+              <label>Country</label>
+
+              <input
+                type="text"
+                value="India"
+                readonly>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           RIGHT SIDEBAR
+      ====================================================== -->
+
+      <aside class="patient-sidebar">
+
+        <!-- Patient Photo -->
+
+        <div class="side-panel">
+
+          <div class="side-panel-title">
+            Patient Photo
+          </div>
+
+          <div class="photo-upload">
+
+            <div class="photo-placeholder">
+              <div class="camera-icon">📷</div>
+
+              <span>
+                Click to upload photo
+              </span>
+
+              <small>
+                JPG, PNG
+              </small>
+            </div>
+
+          </div>
+
+          <button
+            type="button"
+            class="capture-button">
+            Capture
+          </button>
+
+        </div>
+
+
+        <!-- Patient Summary -->
+
+        <div class="side-panel">
+
+          <div class="side-panel-title">
+            Patient Summary
+          </div>
+
+          <div class="summary-row">
+            <span>Patient Code</span>
+
+            <strong>
+              {{ patientForm.controls.patientCode.value || '-' }}
+            </strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Patient Name</span>
+
+            <strong>
+              {{
+                patientForm.controls.firstName.value || '-'
+              }}
+            </strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Gender</span>
+
+            <strong>
+              {{ patientForm.controls.gender.value || '-' }}
+            </strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Blood Group</span>
+
+            <strong>
+              {{ patientForm.controls.bloodGroup.value || '-' }}
+            </strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Mobile</span>
+
+            <strong>
+              {{ patientForm.controls.mobileNo.value || '-' }}
+            </strong>
+          </div>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <app-form-footer
+      [saveText]="isEditMode() ? 'Update Patient' : 'Save Patient'"
+      [saving]="saving()"
+      [disabled]="patientForm.invalid"
+      (saveClicked)="save()"
+      (cancelClicked)="cancel()">
+    </app-form-footer>
+
+  </form>
+
+</app-form-page>

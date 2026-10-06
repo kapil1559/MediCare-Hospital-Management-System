@@ -1,0 +1,927 @@
+@if (loading()) {
+
+  <!-- =========================================================
+       LOADING
+  ========================================================== -->
+
+  <div class="list-loading">
+
+    <mat-spinner diameter="32"></mat-spinner>
+
+    <span>Loading records...</span>
+
+  </div>
+
+} @else if (configuration(); as config) {
+
+  <section class="list-page">
+
+    <!-- =======================================================
+         PAGE HEADER
+    ======================================================== -->
+
+    <header class="list-header">
+
+      <div class="header-decoration"></div>
+
+      <div class="header-content">
+
+        <!-- MODULE ICON -->
+
+        <div class="module-icon">
+          <mat-icon>local_hospital</mat-icon>
+        </div>
+
+
+        <!-- TITLE -->
+
+        <div class="header-title">
+
+          <div class="breadcrumb">
+
+            <span>Medicare</span>
+
+            <mat-icon>chevron_right</mat-icon>
+
+            <span>Management</span>
+
+          </div>
+
+          <h1>
+            {{ config.listTitle }}
+          </h1>
+
+          <p>
+            Manage {{ config.listTitle | lowercase }} records
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           HEADER RIGHT
+      ====================================================== -->
+
+      <div class="header-right">
+
+        <!-- TOTAL -->
+
+        <div class="header-total">
+
+          <span class="header-total-label">
+            Total
+          </span>
+
+          <strong>
+            {{ totalRecords() }}
+          </strong>
+
+        </div>
+
+
+        <!-- ADD -->
+
+        @if (config.addEnabled) {
+
+          <button
+            type="button"
+            mat-flat-button
+            class="add-button"
+            (click)="add()">
+
+            <mat-icon>add</mat-icon>
+
+            <span>
+              Add {{ config.listTitle }}
+            </span>
+
+          </button>
+
+        }
+
+      </div>
+
+    </header>
+
+
+    <!-- =======================================================
+         SEARCH BAR
+    ======================================================== -->
+
+    @if (config.searchEnabled) {
+
+      <section class="filter-bar">
+
+        <div class="search-area">
+
+          <!-- SEARCH -->
+
+          <div class="search-wrapper">
+
+            <mat-icon class="search-icon">
+              search
+            </mat-icon>
+
+            <input
+              type="search"
+              [value]="searchText()"
+              [placeholder]="
+                config.searchPlaceholder || 'Search...'
+              "
+              (input)="onSearchInput($event)"
+              (keyup.enter)="search()" />
+
+          </div>
+
+
+          <!-- SEARCH BUTTON -->
+
+          <button
+            type="button"
+            mat-flat-button
+            class="search-button"
+            (click)="search()">
+
+            <mat-icon>
+              search
+            </mat-icon>
+
+            <span>
+              Search
+            </span>
+
+          </button>
+
+
+          <!-- RESET -->
+
+          <button
+            type="button"
+            mat-stroked-button
+            class="reset-button"
+            (click)="resetSearch()">
+
+            <mat-icon>
+              refresh
+            </mat-icon>
+
+            <span>
+              Reset
+            </span>
+
+          </button>
+
+        </div>
+
+
+        <!-- REFRESH -->
+
+        <button
+          type="button"
+          mat-stroked-button
+          class="refresh-button"
+          matTooltip="Refresh list"
+          (click)="refresh()">
+
+          <mat-icon>
+            sync
+          </mat-icon>
+
+          <span>
+            Refresh
+          </span>
+
+        </button>
+
+      </section>
+
+    }
+
+
+    <!-- =======================================================
+         TABLE
+    ======================================================== -->
+
+    <section class="table-container">
+
+
+      <!-- =====================================================
+           TABLE TOP
+      ====================================================== -->
+
+      <div class="table-top">
+
+        <div>
+
+          <h2>
+            {{ config.listTitle }}
+          </h2>
+
+          <p>
+
+            @if (totalRecords() > 0) {
+
+              {{ totalRecords() }} records available
+
+            } @else {
+
+              No records available
+
+            }
+
+          </p>
+
+        </div>
+
+
+        <!-- LIVE STATUS -->
+
+        <div class="live-status">
+
+          <span class="live-dot"></span>
+
+          <span>
+            Live data
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           TABLE SCROLL
+      ====================================================== -->
+
+      <div class="table-scroll">
+
+        <table class="data-table">
+
+          <!-- =================================================
+               HEADER
+          ================================================== -->
+
+          <thead>
+
+            <tr>
+
+              @for (
+                column of columns();
+                track column.field
+              ) {
+
+                <th
+                  [class.numeric-column]="
+                    column.type === 'number'
+                  ">
+
+                  {{ column.header }}
+
+                </th>
+
+              }
+
+
+              <!-- ACTIONS -->
+
+              @if (
+                config.editEnabled ||
+                config.deleteEnabled
+              ) {
+
+                <th class="actions-column">
+                  Actions
+                </th>
+
+              }
+
+            </tr>
+
+          </thead>
+
+
+          <!-- =================================================
+               BODY
+          ================================================== -->
+
+          <tbody>
+
+            <!-- EMPTY -->
+
+            @if (rows().length === 0) {
+
+              <tr>
+
+                <td
+                  class="empty-cell"
+                  [attr.colspan]="
+                    columns().length +
+                    (
+                      config.editEnabled ||
+                      config.deleteEnabled
+                        ? 1
+                        : 0
+                    )
+                  ">
+
+                  <div class="empty-state">
+
+                    <div class="empty-icon">
+
+                      <mat-icon>
+                        search_off
+                      </mat-icon>
+
+                    </div>
+
+                    <h3>
+                      No records found
+                    </h3>
+
+                    <p>
+                      No
+                      {{ config.listTitle | lowercase }}
+                      match your search.
+                    </p>
+
+                  </div>
+
+                </td>
+
+              </tr>
+
+            }
+
+
+            <!-- DATA -->
+
+            @else {
+
+              @for (
+                row of rows();
+                track $index
+              ) {
+
+                <tr class="data-row">
+
+                  @for (
+                    column of columns();
+                    track column.field
+                  ) {
+
+                    <!-- =====================================
+                         PATIENT / DOCTOR CODE
+                    ====================================== -->
+
+                    @if (
+                      column.field === 'patientCode' ||
+                      column.field === 'doctorCode' ||
+                      column.field === 'departmentCode' ||
+                      column.field === 'appointmentCode'
+                    ) {
+
+                      <td>
+
+                        <span class="code-badge">
+
+                          {{ getCellValue(
+                            row,
+                            column.field
+                          ) }}
+
+                        </span>
+
+                      </td>
+
+                    }
+
+
+                    <!-- =====================================
+                         GENDER
+                    ====================================== -->
+
+                    @else if (
+                      column.field === 'gender'
+                    ) {
+
+                      <td>
+
+                        @if (
+                          getCellValue(
+                            row,
+                            column.field
+                          ).toLowerCase() === 'male'
+                        ) {
+
+                          <span class="gender-badge gender-male">
+
+                            <span class="badge-dot"></span>
+
+                            Male
+
+                          </span>
+
+                        }
+
+                        @else if (
+                          getCellValue(
+                            row,
+                            column.field
+                          ).toLowerCase() === 'female'
+                        ) {
+
+                          <span class="gender-badge gender-female">
+
+                            <span class="badge-dot"></span>
+
+                            Female
+
+                          </span>
+
+                        }
+
+                        @else {
+
+                          <span class="gender-badge gender-other">
+
+                            <span class="badge-dot"></span>
+
+                            {{
+                              getCellValue(
+                                row,
+                                column.field
+                              )
+                            }}
+
+                          </span>
+
+                        }
+
+                      </td>
+
+                    }
+
+
+                    <!-- =====================================
+                         PHONE
+                    ====================================== -->
+
+                    @else if (
+                      column.field === 'mobileNo' ||
+                      column.field === 'phone' ||
+                      column.field === 'phoneNo' ||
+                      column.field === 'mobile'
+                    ) {
+
+                      <td>
+
+                        <span class="phone-value">
+
+                          <mat-icon>
+                            phone
+                          </mat-icon>
+
+                          {{
+                            getCellValue(
+                              row,
+                              column.field
+                            )
+                          }}
+
+                        </span>
+
+                      </td>
+
+                    }
+
+
+                    <!-- =====================================
+                         EMAIL
+                    ====================================== -->
+
+                    @else if (
+                      column.field === 'email' ||
+                      column.field === 'emailID' ||
+                      column.field === 'emailId'
+                    ) {
+
+                      <td>
+
+                        <span class="email-value">
+
+                          <mat-icon>
+                            mail_outline
+                          </mat-icon>
+
+                          {{
+                            getCellValue(
+                              row,
+                              column.field
+                            )
+                          }}
+
+                        </span>
+
+                      </td>
+
+                    }
+
+
+                    <!-- =====================================
+                         BLOOD GROUP
+                    ====================================== -->
+
+                    @else if (
+                      column.field === 'bloodGroup'
+                    ) {
+
+                      <td>
+
+                        <span class="blood-badge">
+
+                          {{
+                            getCellValue(
+                              row,
+                              column.field
+                            )
+                          }}
+
+                        </span>
+
+                      </td>
+
+                    }
+
+
+                    <!-- =====================================
+                         STATUS
+                    ====================================== -->
+
+                    @else if (
+                      column.field === 'status' ||
+                      column.field === 'Status'
+                    ) {
+
+                      <td>
+
+                        <span
+                          class="status-badge"
+                          [class.status-active]="
+                            getCellValue(
+                              row,
+                              column.field
+                            ).toLowerCase() === 'active' ||
+                            getCellValue(
+                              row,
+                              column.field
+                            ).toLowerCase() === 'completed' ||
+                            getCellValue(
+                              row,
+                              column.field
+                            ).toLowerCase() === 'confirmed'
+                          "
+                          [class.status-warning]="
+                            getCellValue(
+                              row,
+                              column.field
+                            ).toLowerCase() === 'pending'
+                          "
+                          [class.status-danger]="
+                            getCellValue(
+                              row,
+                              column.field
+                            ).toLowerCase() === 'cancelled' ||
+                            getCellValue(
+                              row,
+                              column.field
+                            ).toLowerCase() === 'inactive'
+                          ">
+
+                          <span class="status-dot"></span>
+
+                          {{
+                            getCellValue(
+                              row,
+                              column.field
+                            )
+                          }}
+
+                        </span>
+
+                      </td>
+
+                    }
+
+
+                    <!-- =====================================
+                         CURRENCY / AMOUNT
+                    ====================================== -->
+
+                    @else if (
+                      column.field.toLowerCase().includes('amount') ||
+                      column.field.toLowerCase().includes('price') ||
+                      column.field.toLowerCase().includes('fee') ||
+                      column.field.toLowerCase().includes('rate') ||
+                      column.field.toLowerCase().includes('total')
+                    ) {
+
+                      <td class="amount-cell">
+
+                        <span class="currency-value">
+
+                          ₹
+                          {{
+                            getCellValue(
+                              row,
+                              column.field
+                            )
+                          }}
+
+                        </span>
+
+                      </td>
+
+                    }
+
+
+                    <!-- =====================================
+                         AGE / NUMBER
+                    ====================================== -->
+
+                    @else if (
+                      column.type === 'number'
+                    ) {
+
+                      <td class="numeric-column">
+
+                        <span class="number-value">
+
+                          {{
+                            getCellValue(
+                              row,
+                              column.field
+                            )
+                          }}
+
+                        </span>
+
+                      </td>
+
+                    }
+
+
+                    <!-- =====================================
+                         DATE
+                    ====================================== -->
+
+                    @else if (
+                      column.type === 'date'
+                    ) {
+
+                      <td>
+
+                        <span class="date-value">
+
+                          {{
+                            getCellValue(
+                              row,
+                              column.field
+                            )
+                          }}
+
+                        </span>
+
+                      </td>
+
+                    }
+
+
+                    <!-- =====================================
+                         DEFAULT
+                    ====================================== -->
+
+                    @else {
+
+                      <td>
+
+                        <span
+                          [class.primary-text]="
+                            column.field === 'fullName' ||
+                            column.field === 'name' ||
+                            column.field === 'patientName' ||
+                            column.field === 'doctorName'
+                          "
+                          class="cell-text">
+
+                          {{
+                            getCellValue(
+                              row,
+                              column.field
+                            )
+                          }}
+
+                        </span>
+
+                      </td>
+
+                    }
+
+                  }
+
+
+                  <!-- =======================================
+                       ACTIONS
+                  ======================================== -->
+
+                  @if (
+                    config.editEnabled ||
+                    config.deleteEnabled
+                  ) {
+
+                    <td class="actions-cell">
+
+                      @if (config.editEnabled) {
+
+                        <button
+                          type="button"
+                          mat-icon-button
+                          class="edit-action"
+                          matTooltip="Edit"
+                          aria-label="Edit"
+                          (click)="edit(row)">
+
+                          <mat-icon>
+                            edit
+                          </mat-icon>
+
+                        </button>
+
+                      }
+
+
+                      @if (config.deleteEnabled) {
+
+                        <button
+                          type="button"
+                          mat-icon-button
+                          class="delete-action"
+                          matTooltip="Delete"
+                          aria-label="Delete"
+                          (click)="delete(row)">
+
+                          <mat-icon>
+                            delete_outline
+                          </mat-icon>
+
+                        </button>
+
+                      }
+
+                    </td>
+
+                  }
+
+                </tr>
+
+              }
+
+            }
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+
+      <!-- =====================================================
+           FOOTER
+      ====================================================== -->
+
+      <footer class="table-footer">
+
+
+        <!-- RECORD INFO -->
+
+        <div class="record-info">
+
+          @if (totalRecords() > 0) {
+
+            <span class="record-dot"></span>
+
+            <span>
+              Showing
+            </span>
+
+            <strong>
+              {{ startRecord() }}
+            </strong>
+
+            <span>
+              -
+            </span>
+
+            <strong>
+              {{ endRecord() }}
+            </strong>
+
+            <span>
+              of
+            </span>
+
+            <strong>
+              {{ totalRecords() }}
+            </strong>
+
+            <span>
+              records
+            </span>
+
+          } @else {
+
+            <span>
+              No records found
+            </span>
+
+          }
+
+        </div>
+
+
+        <!-- PAGINATION -->
+
+        @if (totalRecords() > 0) {
+
+          <div class="pagination">
+
+
+            <!-- PREVIOUS -->
+
+            <button
+              type="button"
+              [disabled]="!hasPreviousPage()"
+              matTooltip="Previous page"
+              aria-label="Previous page"
+              (click)="previousPage()">
+
+              <mat-icon>
+                chevron_left
+              </mat-icon>
+
+            </button>
+
+
+            <!-- PAGE NUMBERS -->
+
+            @for (
+              page of getPageNumbers();
+              track page
+            ) {
+
+              <button
+                type="button"
+                [class.current-page]="
+                  page === currentPage()
+                "
+                [attr.aria-current]="
+                  page === currentPage()
+                    ? 'page'
+                    : null
+                "
+                (click)="goToPage(page)">
+
+                {{ page }}
+
+              </button>
+
+            }
+
+
+            <!-- NEXT -->
+
+            <button
+              type="button"
+              [disabled]="!hasNextPage()"
+              matTooltip="Next page"
+              aria-label="Next page"
+              (click)="nextPage()">
+
+              <mat-icon>
+                chevron_right
+              </mat-icon>
+
+            </button>
+
+          </div>
+
+        }
+
+      </footer>
+
+    </section>
+
+  </section>
+
+}

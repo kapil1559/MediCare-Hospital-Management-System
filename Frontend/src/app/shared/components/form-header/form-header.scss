@@ -1,0 +1,50 @@
+:host {
+  display: block;
+}
+
+.form-section {
+  background: #fff;
+  border: 1px solid #b9c2cc;
+  margin-bottom: 8px;
+}
+
+.form-section__title {
+  min-height: 32px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 5px 9px;
+
+  background: #f3f5f7;
+  border-bottom: 1px solid #c8d0d8;
+
+  box-sizing: border-box;
+}
+
+.section-line {
+  width: 3px;
+  height: 18px;
+
+  background: #1769aa;
+}
+
+.form-section__title h2 {
+  margin: 0;
+
+  font-size: 13px;
+  font-weight: 600;
+  color: #172b4d;
+}
+
+.form-section__title p {
+  margin: 1px 0 0;
+
+  font-size: 10px;
+  color: #667085;
+}
+
+.form-section__body {
+  padding: 10px;
+}

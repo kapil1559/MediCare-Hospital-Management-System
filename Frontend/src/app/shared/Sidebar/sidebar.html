@@ -1,0 +1,40 @@
+<aside class="sidebar">
+
+  <div class="sidebar-brand">
+    <div class="brand-icon">
+      <span>+</span>
+    </div>
+
+    <div>
+      <strong>MediCare</strong>
+      <small>Hospital Management</small>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+
+    <div class="nav-section-title">
+      Modules
+    </div>
+
+    @for (module of modules(); track module.moduleID) {
+
+      <a
+        class="nav-item"
+        [routerLink]="module.route"
+        routerLinkActive="active"
+      >
+        <span class="nav-icon">
+          {{ module.moduleName.charAt(0) }}
+        </span>
+
+        <span class="nav-label">
+          {{ module.moduleName }}
+        </span>
+      </a>
+
+    }
+
+  </nav>
+
+</aside>

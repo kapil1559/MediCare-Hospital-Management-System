@@ -1,0 +1,32 @@
+<header class="form-header">
+
+  <div class="form-header__left">
+
+    <button
+      type="button"
+      class="back-button"
+      title="Back"
+      (click)="back()">
+      ←
+    </button>
+
+    <div class="form-title">
+      <h1>{{ title() }}</h1>
+
+      @if (subtitle()) {
+        <span>{{ subtitle() }}</span>
+      }
+    </div>
+
+  </div>
+
+  <div class="record-status">
+    <span
+      class="status-dot"
+      [class.edit]="mode() === 'edit'">
+    </span>
+
+    {{ mode() === 'edit' ? 'Edit Record' : 'New Record' }}
+  </div>
+
+</header>

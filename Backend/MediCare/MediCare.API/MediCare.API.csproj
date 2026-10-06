@@ -26,10 +26,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Helpers\" />
     <Folder Include="Middleware\" />
     <Folder Include="Extensions\" />
     <Folder Include="Configurations\" />
-    <Folder Include="Filters\" />
     <Folder Include="Logs\" />
   </ItemGroup>
 
